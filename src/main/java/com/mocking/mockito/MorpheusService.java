@@ -1,7 +1,5 @@
 package com.mocking.mockito;
 
-import com.sun.istack.internal.Nullable;
-
 import javax.inject.Inject;
 
 /**
@@ -23,7 +21,7 @@ public class MorpheusService {
         return result;
     }
 
-    public String methodThatCanThrowException(@Nullable String argument) throws IllegalArgumentException{
+    public String methodThatCanThrowException(String argument) throws IllegalArgumentException{
         if(argument == null) {
             mockService.mockitoVerifyTestMethod();
             throw new IllegalArgumentException("Cannot have null argument in method call!");
